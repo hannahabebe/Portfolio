@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Barlow:wght@900&family=Bowlby+One+SC&family=Kaushan+Script&family=Lato&family=Merriweather&display=swap');
+body{
+    box-sizing: border-box; 
+    overflow:scroll;
+    font-family: 'Alegreya', serif;
+    font-size: larger;
+    /*background-image: url(bgImg2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;*/
+}
+
+/*navbar*/
+.navbar{
+    font-weight: 500;
+    background: rgba(0,0,0,0.6) !important;
+    padding: 20px 0;
+} 
+.navbar-brand{
+    color: white;
+    font-size:larger;
+    font-family: 'Barlow', sans-serif;
+}
+.navbar-dark .navbar-nav .nav-link{
+    color: white;
+    padding-left: 10px;
+} 
+
+#Home{
+    background: url("BgImg2.jpg");
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+#Home h1 {
+   /* font-weight: 900;*/
+   text-transform: uppercase;
+   text-align: center;
+   font-size: 7em;
+   font-weight: bolder;
+   color: white;
+   font-family: 'Barlow', sans-serif;
+}
+
+#Home p {
+    /*font-size: 18px;
+    max-width: 450px;*/
+    font-weight: 200;
+    text-align: justify;
+    padding-left: 410px;
+    color: white;
+    font-family: 'Merriweather', serif;
+}
+
+section {
+  padding-top: 250px;
+  padding-bottom: 200px;
+}
+/*About*/
+.paragraph{
+    font-family: 'Kaushan Script', cursive;
+}
+#About img {
+  border-radius: 50%;
+}
+
+
+/*Skills*/
+
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.holder {
+  width: 100%; /* Full width */  
+}
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  color: white; /* White text color */
+}
+
+.html {width: 80%; } 
+.css {width: 70%; } 
+.js {width: 30%; } 
+.c {width: 75%; } 
+.sql {width: 80%; }
+.java {width: 60%; }
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/*Services*/
+.service {
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  border-radius: 30px;
+  display: flex;
+  padding: 32px;
+  font-family: 'Barlow', sans-serif;
+}
+.service button {
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: fit-content;
+  font-size: 18px;
+}
+.service a:hover {
+  opacity: 0.7;
+}
+.service button a{
+  color: white;
+}
+.service img { 
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  border-radius: 20px;
+  margin-right: 16px;
+  margin-top: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;  
+    margin-top: 15px;
+}
+
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card a:hover {
+    opacity: 0.7;
+  }
+  .card p button a{
+    color: white;
+  }
+  .stickyicon-list{
+    top: 200px;   
+    transform: translateY(-50%);    
+  }
+  .stickyicon-list a{  
+    text-align: center;  
+    padding: 5px;   
+    transition: all 0.5s ease;   
+    color: white;   
+    font-size: 20px;   
+}         
+.stickyicon-list a:hover {   
+  color: #000;   
+  width:10px;   
+}   
+  .ig {   
+    background: linear-gradient(5deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;   
+    }
+  .tg{
+    color: white;   
+    background: #41a6d4;   
+
+  }
+  .tt{
+    color: white;   
+    background: #000;   
+  }
+
+  
+  /**Contact**/
+  /* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #000;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker gray color */
+  input[type=submit]:hover {
+    background-color: darkgray;
+  }
+  
+  /* Add a background color and some padding around the form */ 
+
+  
+  /*.container {
+    border-radius: 5px;
+    background-image: url(bgImg1.jpg);
+    padding: 20px;
+  }*/
+  
