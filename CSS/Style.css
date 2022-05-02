@@ -31,6 +31,7 @@ body{
     min-height: 100vh;
     background-position: center;
     background-size: cover;
+    padding-top: 250px;
 }
 
 #Home h1 {
@@ -55,8 +56,8 @@ body{
 }
 
 section {
-  padding-top: 250px;
-  padding-bottom: 200px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 h2{
