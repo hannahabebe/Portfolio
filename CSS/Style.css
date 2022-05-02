@@ -37,6 +37,7 @@ body{
    /* font-weight: 900;*/
    text-transform: uppercase;
    text-align: center;
+   padding-left: 300px;
    font-size: 7em;
    font-weight: bolder;
    color: white;
@@ -47,8 +48,8 @@ body{
     /*font-size: 18px;
     max-width: 450px;*/
     font-weight: 200;
-    text-align: justify;
-    padding-left: 410px;
+    text-align: center;
+    padding-left: 350px;
     color: white;
     font-family: 'Merriweather', serif;
 }
@@ -57,6 +58,12 @@ section {
   padding-top: 250px;
   padding-bottom: 200px;
 }
+
+h2{
+  color: rgb(106, 104, 102);
+  font-weight: 900;
+}
+
 /*About*/
 .paragraph{
     font-family: 'Kaushan Script', cursive;
