@@ -14,7 +14,7 @@ body{
 .navbar{
     font-weight: 500;
     background: rgba(0,0,0,0.6) !important;
-    padding: 20px 0;
+   /* padding: 20px 0;*/
 } 
 .navbar-brand{
     color: white;
@@ -23,7 +23,7 @@ body{
 }
 .navbar-dark .navbar-nav .nav-link{
     color: white;
-    padding-left: 10px;
+   /* padding-left: 10px;*/
 } 
 
 #Home{
