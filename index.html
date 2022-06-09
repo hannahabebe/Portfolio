@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   
+  <link id="theme-style" rel="stylesheet" href="">
   <title>Personal Portfolio</title>
 </head>
 
@@ -66,9 +67,9 @@
         <!--Nav End-->
     <!--Home-->
     <section id="Home">
-      <div class="container mt-3 mb-5">
-          <div class="row">
-              <div>
+      <div class="main-container mt-3 mb-5">
+          <div class="wrapper">
+              <div class="greeting-wrapper">
                   <h1>Welcome!</h1>
                   <p>I'm Hanna Abebe, a 3<sup>rd</sup> Year Computer Science Student.</p>
               </div>
@@ -77,25 +78,38 @@
     </section>
 
     <!--About Page-->
-    <section id = "About" class="container mt-3 mb-5">
-        <div class="post-heading text-center">
-           <h2 class="display-3">About Me</h2>
-           <hr class="w-50">
-        </div>
+    <section id = "About"><!--class="container mt-3 mb-5"-->
+      <div class="main-container">
+        <div class="intro-wrapper">
 
-        <div class="row">
-          <div class="col-lg-6 about">
-            <img src="Images/aboutMeImg.jpeg">
+          <div class = "nav-wrapper">
+            <h2 class="post-heading text-center display-3">About Me</h2>
+            <hr class="w-50">
+          </div>
+
+          <div class="left-column"><!--class="col-lg-6 about"-->
+            <img id="about-pic" src="Images/aboutMeImg - Copy.jpeg"> <!--TO BE EDITTED-->
+            <h5 style="text-align:center; line-height: 0;">Personalize Theme</h5>
+            
+            <div id="theme-opt-wrapper" class="mt-3">
+              <div data-mode="light" id = "light-mode" class="theme-dots"></div>
+              <div data-mode="cyan" id = "cyan-mode" class="theme-dots"></div>
+              <div data-mode="brown" id = "brown-mode" class="theme-dots"></div>
+              <div data-mode="gray" id = "gray-mode" class="theme-dots"></div>
+              <div data-mode="dark" id = "dark-mode" class="theme-dots"></div>
+            </div>
+
+            <p id="settings-note">Your theme preferences will be kept for <br> your future visit.</p>
           </div>
         
 
-        <div class="col-lg-6">
-          <br><br><br>
-          <p class=" Paragraph pt-lg-5 ">My Name is Hanna Abebe. I am a 3<sup>rd</sup> Year
-              Computer Science Student <a href= "https://actamericancollege.com" class="anchor" target="blank"> @<abbr title="American College Of Technology">ACT</abbr>  </a>.
-              I have Taken Some of the Basic Programming Languages i.e. C++, SQL, & Java and also
-              Markup and Scripting Languages:- HTML, CSS, & Javascript. In Addition, I am a Small-Business Owner.
-              You'll Found More on the <a href="#Services" class="anchor">Services</a> Page.</p>
+          <div class="right-column"><!--class="col-lg-6"-->
+            <br><br><br>
+            <p class=" Paragraph">My Name is Hanna Abebe. I am a 3<sup>rd</sup> Year
+                Computer Science Student <a href= "https://actamericancollege.com" class="anchor" target="blank"> @<abbr title="American College Of Technology">ACT</abbr>  </a>.
+                I have Taken Some of the Basic Programming Languages i.e. C++, SQL, & Java and also
+                Markup and Scripting Languages:- HTML, CSS, & Javascript. In Addition, I am a Small-Business Owner.
+                You'll Found More on the <a href="#Services" class="anchor">Services</a> Page.</p>
             <div id="row">
               <div id="column">
                 <img src="Images/cert-1014-13316451.jpg">
@@ -110,10 +124,13 @@
                 <img src="Images/CPlusPlus_certificate.jpg">
               </div>
             </div>
+            <br>
+            <div class="resume"> 
+              <a target="blank" href="Hanna Abebe(CV).pdf" class="btn btn-outline-light" >Download Resume!</a></div>
           </div>
         </div>
-    
-      </Section>
+      </div>
+    </Section>
 
     <!--Skills-->
     <section id="MySkills" class="container mt-3 mb-5">
@@ -270,7 +287,7 @@
       </div>
 
       <div class="container">
-        <form action="action_page.php">
+        <form action="contact.html">
           <label for="fname">First Name</label>
           <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
@@ -287,7 +304,7 @@
       
           <label for="subject">Message</label>
           <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-          <input type="submit" value="Submit">
+          <input type="submit" value="submit">
         </form>
       </div>
     </section>
@@ -298,5 +315,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</body>
+    <script src="js/Script.js"></script>
+
+  </body>
 </html>
