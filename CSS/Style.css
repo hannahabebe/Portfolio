@@ -1,16 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Barlow:wght@900&family=Bowlby+One+SC&family=Kaushan+Script&family=Lato&family=Merriweather&display=swap');
-body{
-    box-sizing: border-box; 
-    overflow:scroll;
-    font-family: 'Alegreya', serif;
-    font-size: larger;
+html,body{
+  padding: 0;
+  margin:0;
+  scroll-behavior: smooth;
+  /*box-sizing: border-box;*/
 }
 
+body{
+    font-family: 'Alegreya', serif;
+    font-size: larger;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--bgColor);
+    transition: 0.5s;
+}
+
+/* Makes sure that padding behaves as expected */
+* {box-sizing:border-box;}
+
+a{
+  text-decoration: none;
+}
+:root{
+  --homeColor: white;
+  --borderColor: gray;
+  --theme-dots: rgb(100, 99, 99);
+  --bgColor: white;
+  --gray: gray;
+  --headings: rgb(106, 104, 102);
+}
 /*navbar*/
 .navbar{
     font-weight: 500;
     background: rgba(0,0,0,0.6) !important;
-   /* padding: 20px 0;*/
+    /* border: 2px dashed white; */
 } 
 .navbar-brand{
     color: white;
@@ -19,7 +42,6 @@ body{
 }
 .navbar-dark .navbar-nav .nav-link{
     color: white;
-   /* padding-left: 10px;*/
 } 
 
 .fa {
@@ -33,12 +55,15 @@ body{
 }
 
 .fa:hover {
-  color: rgb(130, 129, 128);
+  color: var(--gray);
 }
 
 
 #Home{
     background: url(../Images/BgImg2.jpg);
+    /*border-bottom: ;*/
+    /*overflow: auto;*/
+    color: var(--homeColor);
     min-height: 100vh;
     background-position: center;
     background-size: cover;
@@ -48,11 +73,8 @@ body{
 #Home h1 {
    /* font-weight: 900;*/
    text-transform: uppercase;
-   text-align: center;
-   padding-left: 300px;
    font-size: 7em;
    font-weight: bolder;
-   color: white;
    font-family: 'Barlow', sans-serif;
 }
 
@@ -60,12 +82,109 @@ body{
     /*font-size: 18px;
     max-width: 450px;*/
     font-weight: 200;
-    text-align: center;
-    padding-left: 350px;
-    color: white;
     font-family: 'Merriweather', serif;
 }
 
+.main-container{
+  width: 1200px;
+  margin: 0 auto;
+}
+.greeting-wrapper{
+  display: grid;
+  text-align: center;
+  align-content: center;
+}
+
+/*About Page*/
+#About{
+  border-bottom: var(--borderColor);
+  background-color: var(--bgColor);
+  border-top: 2px solid white;
+}
+
+.intro-wrapper{
+  /* background-color: var(--bgColor); */
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr;
+  /*grid-template-rows: 6em 25em;*/
+  grid-template-areas: 
+    'nav-wrapper nav-wrapper'
+    'left-column right-column'
+  ;
+}
+.nav-wrapper{
+  grid-area: nav-wrapper;
+  /* border: 1px dashed var(--borderColor); */
+}
+.left-column{
+  grid-area: left-column;
+  padding: 5px 5px 20px 5px;
+  /* border: 1px dashed var(--borderColor); */
+ }
+ #about-pic{
+   display: block;
+   object-fit: cover;
+   margin: 0 auto;
+   margin-bottom: 15px;
+ }
+ #theme-opt-wrapper{
+   display: flex;
+   justify-content: center;
+   margin: 5px;
+  }
+ .theme-dots{
+   width: 30px;
+   height: 30px;
+   margin: 5px;
+   border-radius: 50%;
+   border: 2px solid var(--theme-dots);
+   cursor: pointer;
+
+   box-shadow: 6px 6px 1px -1px rgba(61,60,60,0.79);
+  -webkit-box-shadow: 6px 6px 1px -1px rgba(61,60,60,0.79);
+  -moz-box-shadow: 6px 6px 1px -1px rgba(61,60,60,0.79);
+ }
+ .theme-dots:hover{
+   border-width: 3.5px;
+ }
+
+#light-mode{
+  background-color: white;
+}
+#cyan-mode{
+  background-color: cyan;
+}
+#brown-mode{
+  background-color: brown;
+}
+#gray-mode{
+  background-color: gray;
+}
+#dark-mode{
+  background-color: black;
+}
+
+#settings-note{
+  text-align: center;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.right-column{
+grid-area: right-column;
+/* border: 1px dashed var(--borderColor); */
+padding: 18px 0;
+}
+.paragraph{
+  font-family: 'Kaushan Script', cursive;
+}
+.anchor:hover{
+color: var(--gray);
+}
+/*.about img {
+width: 100%;
+border-radius: 100%;
+}*/
 
 #row {
   display: flex;
@@ -85,23 +204,19 @@ body{
   vertical-align: middle;
   width: 100%;
 }
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  #column {
-    flex: 50%;
-    max-width: 50%;
-  }
+.resume{
+  margin-left: 280px;
 }
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  #column {
-    flex: 100%;
-    max-width: 100%;
-  }
+.btn {
+  border-radius: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: blue;
 }
-
+.btn:hover{
+  background-color: aquamarine;
+  color: blue;
+}
 
 section {
   padding-top: 100px;
@@ -109,28 +224,11 @@ section {
 }
 
 h2{
-  color: rgb(106, 104, 102);
+  color: var(--headings);
   font-weight: 900;
 }
 
-/*About*/
-.paragraph{
-    font-family: 'Kaushan Script', cursive;
-}
-.anchor:hover{
-  color: rgb(130, 129, 128);;
-}
-.about img {
-  width: 100%;
-  border-radius: 100%;
-}
-
-
 /*Skills*/
-
-/* Make sure that padding behaves as expected */
-* {box-sizing:border-box}
-
 /* Container for skill bars */
 .holder {
   width: 100%; /* Full width */  
@@ -140,8 +238,8 @@ h2{
   padding-top: 5px; /* Add top padding */
   margin-top: 20px;
   margin-bottom: 5px;
-  color: white; /* White text color */
-  background-color: rgb(130, 129, 128);
+  color: lightblue; /* White text color */
+  background-color: var(--gray);
 }
 
 .html {width: 80%; } 
@@ -157,17 +255,23 @@ h2{
   width: 50%;
 }
 
+
 /*Services*/
+#Services{
+  border-bottom: 2px solid white;
+}
+
 .service {
   border: 1px solid rgba(0, 0, 0, 0.10);
   border-radius: 30px;
   display: flex;
   padding: 32px;
   font-family: 'Barlow', sans-serif;
+  background-color: var(--bgColor);
 }
 .service button {
   color: white;
-  background-color: rgb(130, 129, 128);
+  background-color: var(--gray);
   text-align: center;
   cursor: pointer;
   width: fit-content;
@@ -194,12 +298,13 @@ h2{
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgb(130, 129, 128);
+    box-shadow: 0 4px 8px 0 var(--gray);
     max-width: 300px;
     margin: auto;
     text-align: center;
     font-family: 'Barlow', sans-serif;  
     margin-top: 15px;
+    background-color: var(--bgColor);
 }
 
   .price {
@@ -212,7 +317,7 @@ h2{
     outline: 0;
     padding: 12px;
     color: white;
-    background-color:rgb(130, 129, 128);;
+    background-color:var(--gray);;
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -237,7 +342,7 @@ h2{
     font-size: 20px;   
 }         
 .stickyicon-list a:hover {   
-  color: rgb(130, 129, 128);
+  color: var(--gray);
   width:10px;   
 }   
   .ig {   
@@ -270,7 +375,7 @@ input[type=text], select, textarea {
   
   /* Style the submit button with a specific background color etc */
   input[type=submit] {
-    background-color: rgb(130, 129, 128);
+    background-color: var(--gray);
     color: white;
     padding: 10px 15px;
     border: none;
@@ -291,4 +396,35 @@ input[type=text], select, textarea {
     background: url(../Images/BgImg1.jpg);
     padding: 20px;
   }*/
+  @media screen and (max-width: 1200px) {
+    .main-container{
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    html,body{
+      min-width: 100vh;
+    }
   
+}
+
+@media screen and (max-width: 800px) {
+
+  .intro-wrapper{
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      'nav-wrapper'
+      'left-column'
+      'right-column'
+    ;
+  }
+  .right-column{
+    justify-content: center;
+  }
+  
+/* Responsive layout which makes a two columns instead of four columns */
+  #column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
